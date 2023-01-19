@@ -1,104 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js" defer></script>
-    <script src="butter.js" defer></script>
-    <script src="rellax.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="container">
-      <nav class="nav">
-        <ul class="nav__left">
-          <li><a href="/">MENU</a></li>
-          <li><a href="/">ROOMS & SUITES</a></li>
-          <li><a href="/">ZIQÙ RESTAURANT</a></li>
-        </ul>
-        <img src="icons/logo.svg" alt="logo" class="nav__logo" />
-        <ul class="nav__right">
-          <li><a href="/">WELLNESS</a></li>
-          <li><a href="/">POOL & SUNDECK</a></li>
-          <li><a href="/">BOOK NOW</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id="butter">
-      <section class="hero">
-        <div class="hero__logo-container rellax" data-rellax-speed="2">
-          <img class="hero__logo" src="icons/logo-text.svg" alt="" />
-          <div class="arrow-container">
-            <img class="hero__arrow" src="icons/arrow-down.svg" alt="" />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="circle"
-              width="48"
-              height="48"
-            >
-              <circle
-                cx="25"
-                cy="25"
-                r="22.5"
-                stroke="white"
-                stroke-width="1.3"
-                fill="transparent"
-              ></circle>
-            </svg>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script.js" defer></script>
+  <script src="butter.js" defer></script>
+  <script src="rellax.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="container">
+    <nav class="nav">
+      <ul class="nav__left">
+        <li><a href="/">MENU</a></li>
+        <li><a href="/">ROOMS & SUITES</a></li>
+        <li><a href="/">ZIQÙ RESTAURANT</a></li>
+      </ul>
+      <img src="icons/logo.svg" alt="logo" class="nav__logo" />
+      <ul class="nav__right">
+        <li><a href="/">WELLNESS</a></li>
+        <li><a href="/">POOL & SUNDECK</a></li>
+        <li><a href="/">BOOK NOW</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="butter">
+    <section class="hero">
+      <div class="hero__logo-container rellax" data-rellax-speed="2">
+        <img class="hero__logo" src="icons/logo-text.svg" alt="" />
+        <div class="arrow-container">
+          <img class="hero__arrow" src="icons/arrow-down.svg" alt="" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="circle" width="48" height="48">
+            <circle cx="25" cy="25" r="22.5" stroke="white" stroke-width="1.3" fill="transparent"></circle>
+          </svg>
         </div>
-      </section>
-      <section class="paradise container">
-        <p class="paradise__welcome-text">
-          Welcome to Villa Marina Capri Hotel&Spa, the 5-star hotel in which you
-          can experience total wellbeing
+      </div>
+    </section>
+    <section class="paradise container">
+      <p class="paradise__welcome-text">
+        Welcome to Villa Marina Capri Hotel&Spa, the 5-star hotel in which you
+        can experience total wellbeing
+      </p>
+      <h1 class="paradise__header">A paradise in paradise</h1>
+      <p class="paradise__text">
+        Villa Marina is an authentic Caprese Villa overlooking the sea and
+        surrounded by a luxuriant garden with typical Mediterranean
+        vegetation. An elegant house ready to unveil its amenities to those
+        visiting the Blue Island. Here you will find a warm welcome that
+        evokes the Dolce Vita golden years, a time that carved Capri as a jet
+        set privileged destination from all over the world, a timeless setting
+        of beauty and culture. For this reason every room and suite of Villa
+        Marina bears the name of a character related to island history and who
+        contributed to create the myth that still endures nowadays in the
+        collective imagination.
+      </p>
+      <img class="paradise__image container" src="/images/paradise-img.jpg" alt="" />
+    </section>
+    <section class="charming-capri container">
+      <div class="charming-capri__text">
+        <h1 class="section-subheading">CHARMING CAPRI</h1>
+        <p>
+          Villa Marina is a destination in a destination. Privacy and peace
+          are guaranteed benefits in this location that is only minutes away
+          from all major places of interest of the island.
         </p>
-        <h1 class="paradise__header">A paradise in paradise</h1>
-        <p class="paradise__text">
-          Villa Marina is an authentic Caprese Villa overlooking the sea and
-          surrounded by a luxuriant garden with typical Mediterranean
-          vegetation. An elegant house ready to unveil its amenities to those
-          visiting the Blue Island. Here you will find a warm welcome that
-          evokes the Dolce Vita golden years, a time that carved Capri as a jet
-          set privileged destination from all over the world, a timeless setting
-          of beauty and culture. For this reason every room and suite of Villa
-          Marina bears the name of a character related to island history and who
-          contributed to create the myth that still endures nowadays in the
-          collective imagination.
-        </p>
-        <img
-          class="paradise__image container"
-          src="/images/paradise-img.jpg"
-          alt=""
-        />
-      </section>
-      <section class="charming-capri container">
-        <div class="charming-capri__text">
-          <h1>CHARMING CAPRI</h1>
-          <p>
-            Villa Marina is a destination in a destination. Privacy and peace
+      </div>
+      <div class="charming-capri__grid grid">
+        <div class="charming-capri__left image__left"><p class="rellax image__text" data-rellax-percentage="0.5" data-rellax-speed="2">GARDEN & OPEN SPACES</p></div>
+        <div class="charming-capri__right image__right"></div>
+        <div class="bottom__text">
+          <p>Villa Marina is a destination in a destination. Privacy and peace
             are guaranteed benefits in this location that is only minutes away
             from all major places of interest of the island.
           </p>
-        </div>
-        <div class="charming-capri__images">
-          <div class="charming-capri__image--left">
-            <p data-rellax-speed="2" class="left-img__text">
-              GARDEN & OPEN SPACES 
-            </p>
+          <div class="more-grid">
+            <span>MORE</span>
+            <span>&rarr;</span>
           </div>
-          <div class="charming-capri__image--right"></div>
         </div>
-        <p class="park-text">
-          The hotel’s luxuriant park, with seating, chaise longs, hammocks, and
-          many comfort corners, to enjoy the Mediterranean sky surrounded by its
-          heady colours.
-        </p>
-      </section>
-    </main>
-  </body>
+      </div>
+      <div>
+      </div>
+    </section>
+    <h1 class="section-heading caprese-villa__heading">AN AUTHENTIC <br> CAPRESE VILLA</h1>
+    <section class="caprese-villa">
+      <div class="rooms-text">
+        <div class="rooms-dynamic">
+          <h3 class="carousel__heading">POOL SUITE SEA VIEW WITH TERRACE</h3>
+          <p class="carousel__para">The private terrace features a heated plunge pool overlooking the Mediterranean
+            Sea.</p>
+        </div>
+        <div class="more">
+          <span>MORE</span>
+          <span>&rarr;</span>
+        </div>
+        <h1 class="section-subheading rooms-heading">ROOMS & SUITES</h1>
+      </div>
+      <div class="rooms-carousel">
+        <div class="carousel-left carousel-button"><span>&larr;</span></div>
+        <div class="carousel-right carousel-button"><span>&rarr;</span></div>
+        <div class="carousel-images">
+          <div class="rooms__card rc1"></div>
+          <div class="rooms__card rc2"></div>
+          <div class="rooms__card rc3"></div>
+          <div class="rooms__card rc4"></div>
+          <div class="rooms__card rc5"></div>
+          <div class="rooms__card rc6"></div>
+          <div class="rooms__card rc7"></div>
+          <div class="rooms__card rc8"></div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="journey container">
+      <h1 class="section-heading">A TASTEFUL JOURNEY</h1>
+        <div class="journey__grid grid">
+          <div class="journey__left image__left"><p class="rellax image__text" data-rellax-percentage="0.7" data-rellax-speed="2">DINING EXPERIENCES</p></div>
+          <div class="journey__right image__right"></div>
+          <div class="bottom__text">
+            <p>Local products are featured in a cuisine that has its roots in tradition, but is prepared to experiment new trends and fashions.</p>
+            <div class="more-grid">
+              <span>MORE</span>
+              <span>&rarr;</span>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="relax">
+      <h1 class="section-heading">RELAX & FITNESS</h1>
+      <div class="image-para__container">
+          <img src="/images/relax-img.jpg" class="image-para rellax" data-rellax-speed="2" data-rellax-percentage="0.5" alt="">
+          <div class="relax-text rellax" data-rellax-speed="3" data-rellax-percentage="0.5">
+            <div>
+              <h3 class="relax-text__heading">WELLNESS</h3>
+              <p class="relax-text__para">In our STAI SPA guests will live an experience of total wellbeing and relaxation, thanks to most advanced techniques of psycho - physical harmony.</p>
+            </div>
+            <div class="more relax-more">
+              <span>MORE</span>
+              <span>&rarr;</span>
+          </div>
+          </div>
+        </div>
+    </section>
+    <section class="promotions">
+      <div class="promotions__content">
+        <h3 class="section-subheading">ALL SEASON PROMOTIONS</h3>
+        <div class="promotions-left promotions-button"><span>&larr;</span></div>
+        <div class="promotions-right promotions-button"><span>&rarr;</span></div>
+        <div class="promotions-carousel__container">
+          <div class="promotions-carousel__images">
+            <div class="promo-image__container pi1"></div>
+            <div class="promo-image__container pi2"></div>
+          </div>
+        </div>
+        <div class="promo__text-bottom">
+          <div>
+            <h3>VILLA MARINA STAI RELAX</h3>
+            <p>A wonderful holiday in one of the most beautiful locations in Capri Island</p>
+          </div>
+          <div class="more promo-more">
+            <span>MORE</span>
+            <span>&rarr;</span>
+        </div>
+        </div>
+
+    </section>
+  </main>
+</body>
 </html>
