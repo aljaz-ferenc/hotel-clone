@@ -26,6 +26,10 @@ const promotionImagesElement = document.querySelector('.promotions-carousel__ima
 const promotionCarouselBtnLeft = document.querySelector('.promotions-left')
 const promotionCarouselBtnRight = document.querySelector('.promotions-right')
 const promotionImages = document.querySelectorAll('.promo-image__container')
+const luxCarouselBtnRight = document.querySelector('.lux-carousel-right')
+const luxCarouselBtnLeft = document.querySelector('.lux-carousel-left')
+const luxImagesElement = document.querySelector('.lux-carousel-images')
+const luxImages = document.querySelectorAll('.lux__card')
 
 
 //hero down arrow animation
@@ -91,7 +95,7 @@ function appear(elements) {
 function appearOpacity(elements) {
     elements.forEach(element => {
         gsap.from(element, {
-            y:300,
+            y: 300,
             opacity: 0,
             duration: 1,
             scrollTrigger: {
@@ -115,7 +119,7 @@ appearImages.forEach((img, i) => {
         x: 50,
         delay: i * 0.3,
         scale: .9,
-        opacity:0,
+        opacity: 0,
         duration: 1.5,
         scrollTrigger: {
             trigger: img,
@@ -190,10 +194,10 @@ function displayCarouselHeading() {
     }, 500);
 }
 
-function displayCarouselPara(){
+function displayCarouselPara() {
     carouselPara.style.transform = 'translateY(20px)'
     carouselPara.style.opacity = '0'
-    
+
     setTimeout(() => {
         carouselPara.style.transform = 'translateY(0)'
         carouselPara.style.opacity = '1'
@@ -240,20 +244,20 @@ const carouselText = [
 let promoState = 1
 
 promotionCarouselBtnRight.addEventListener('click', () => {
-    if(promoState === 2) return
+    if (promoState === 2) return
     promoState++
     const [cardWidth, gapWidth] = calcTransformPromoDistance()
-    promotionImagesElement.style.transform = `translateX(-${(cardWidth + (gapWidth)) * (promoState - 1)}px)`
+    promotionImagesElement.style.transform = `translateX(-${(cardWidth + gapWidth) * (promoState - 1)}px)`
     displayPromoButtons()
-    brightenPromoImage() 
+    brightenPromoImage()
 })
 
 promotionCarouselBtnLeft.addEventListener('click', () => {
-    if(promoState === 1) return
+    if (promoState === 1) return
     promotionImagesElement.style.transform = `translateX(0)`
     promoState--
     displayPromoButtons()
-    brightenPromoImage() 
+    brightenPromoImage()
 })
 
 displayPromoButtons()
@@ -282,7 +286,63 @@ brightenPromoImage()
 function calcTransformPromoDistance() {
     const carouselWidth = promotionImagesElement.scrollWidth
     const cardWidth = promotionImages[0].scrollWidth
-    const gapWidth = carouselWidth - cardWidth * 2
+    const gapWidth = (carouselWidth - cardWidth * promotionImages.length) / (promotionImages.length - 1)
     return [cardWidth, gapWidth]
 }
 
+
+//carousel lux section
+
+let luxState = 1
+
+luxCarouselBtnRight.addEventListener('click', () => {
+    if (luxState === 4) return
+    luxState++
+    const [cardWidth, gapWidth] = calcTransformLuxDistance()
+    luxImagesElement.style.transform = `translateX(-${(cardWidth + gapWidth) * (luxState - 1)}px)`
+    displayLuxButtons()
+})
+
+luxCarouselBtnLeft.addEventListener('click', () => {
+    if (luxState === 1) return
+    luxState--
+    const [cardWidth, gapWidth] = calcTransformLuxDistance()
+    luxImagesElement.style.transform = `translateX(-${(cardWidth + gapWidth) * (luxState - 1)}px)`
+    displayLuxButtons()
+})
+
+displayLuxButtons()
+
+function calcTransformLuxDistance() {
+    const carouselWidth = luxImagesElement.scrollWidth
+    const cardWidth = luxImages[0].scrollWidth
+    const gapWidth = (carouselWidth - cardWidth * luxImages.length) / (luxImages.length - 1)
+    return [cardWidth, gapWidth]
+}
+
+function displayLuxButtons(){
+    if (luxState === 1) {
+        luxCarouselBtnLeft.style.opacity = '0'
+    } else {
+        luxCarouselBtnLeft.style.opacity = '1'
+    }
+    if (luxState === 4) {
+        luxCarouselBtnRight.style.opacity = '0'
+    } else {
+        luxCarouselBtnRight.style.opacity = '1'
+    }
+}
+
+luxImages.forEach((img, i) => {
+    gsap.from(img, {
+        x: 50,
+        delay: i * 0.2,
+        scale: .9,
+        opacity: 0,
+        duration: 1.5,
+        scrollTrigger: {
+            trigger: img,
+            start: 'top 95%'
+        }
+    })
+})

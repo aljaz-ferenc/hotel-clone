@@ -2,7 +2,7 @@
 
 :root {
   --color-text: rgb(66, 73, 80);
-  --color-background: rgb(220, 216, 201);
+  --color-background: rgb(241, 239, 232);
 }
 
 body {
@@ -226,7 +226,7 @@ header {
 }
 
 .section-subheading {
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 200;
   color: rgb(66, 73, 80);
 }
@@ -623,3 +623,124 @@ div:has(.park-text) {
 .promo-more{
   margin-right: 5rem;
 }
+
+.lux{
+  background-color: var(--color-background);
+}
+
+.lux-text{
+  padding: 5rem 0;
+  width: 80%;
+  margin-left: auto;
+  padding-right: 15rem;
+}
+
+.lux-para{
+  font-size: 1.3rem;
+  line-height: 1.8;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  margin-top: 4rem;
+}
+
+.lc1{
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url('images/lux-1.jpg');
+}
+.lc2{
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url('images/lux-2.jpg');
+}
+.lc3{
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url('images/lux-3.jpg');
+}
+.lc4{
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url('images/lux-4.jpg');
+}
+
+.lux-carousel{
+  position: relative;
+}
+
+
+.lux-carousel-images{
+  width: fit-content;
+  display: flex;
+  gap: 3rem;
+  transition: all .5s ease;
+}
+
+.lux__card{
+  height: 31vw;
+  background-size: cover;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.lux__card > div{
+  position: absolute;
+  width: 50%;
+  top: 20%;
+  left: 40%;
+  font-size: 1.3rem;
+}
+
+.lux__card h4,
+.lux__card p{
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+.lux-carousel-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  background-color: rgba(255, 255, 255, 0.422);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .2s;
+  cursor: pointer;
+  z-index: 10;
+  transition: all .2s;
+}
+
+.lux-carousel-button:hover{
+  background-color: #fff;
+}
+
+.lux-carousel-button span{
+  font-size: 2rem;
+}
+
+.lux-carousel-button span::selection{
+  color: var(--color-text);
+  background-color: transparent;
+}
+
+.lux-carousel-right{
+  right: 0;
+}
+
