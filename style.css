@@ -744,3 +744,82 @@ div:has(.park-text) {
   right: 0;
 }
 
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10rem;
+  gap: 20rem;
+}
+
+.info ul{
+  list-style: none;
+}
+
+.info .link a{
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1.3rem;
+}
+
+.info-left{
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.links-left,
+.links-right{
+  line-height: 2;
+}
+
+.info .contact{
+  text-align: center;
+  line-height: 1.8;
+}
+
+.info img{
+  margin: 0 auto;
+  display: block;
+}
+
+.social{
+  background-color: rgb(200, 196, 184);
+  display: flex;
+  justify-content: space-between;
+  padding: 8rem 20%;
+  margin: 5rem 0;
+}
+
+.social__icons{
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.social__icons div img{
+  width: 40px;
+  cursor: pointer;
+}
+
+.social__partners{
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.social__partners img{
+  height: 3rem;
+}
+.social__partners img:nth-child(3){
+  height: 7rem;
+}
+
+.legal{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10%;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}

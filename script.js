@@ -30,6 +30,7 @@ const luxCarouselBtnRight = document.querySelector('.lux-carousel-right')
 const luxCarouselBtnLeft = document.querySelector('.lux-carousel-left')
 const luxImagesElement = document.querySelector('.lux-carousel-images')
 const luxImages = document.querySelectorAll('.lux__card')
+const footerLinks = document.querySelectorAll('.link')
 
 
 //hero down arrow animation
@@ -342,6 +343,19 @@ luxImages.forEach((img, i) => {
         duration: 1.5,
         scrollTrigger: {
             trigger: img,
+            start: 'top 95%'
+        }
+    })
+})
+
+footerLinks.forEach((link, i) => {
+    gsap.from(link, {
+        y:20,
+        delay: i * 0.1,
+        opacity:0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: link,
             start: 'top 95%'
         }
     })
