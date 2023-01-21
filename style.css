@@ -8,6 +8,7 @@
 body {
   font-family: "Cormorant Garamond", serif;
   color: var(--color-text);
+  overflow-x: hidden;
 }
 
 *,
@@ -107,7 +108,7 @@ header {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    url("/images/hero-img.jpg");
+    url("/images/hero-img.webp");
   background-size: cover;
   background-position: bottom;
   position: relative;
@@ -170,11 +171,11 @@ header {
   color: inherit;
 }
 
-.paradise h1 {
+/* .paradise h1 {
   font-size: 7rem;
   text-align: center;
   font-weight: 200;
-}
+} */
 
 .paradise .paradise__text {
   margin: 5rem auto;
@@ -229,6 +230,7 @@ header {
   font-size: 6rem;
   font-weight: 200;
   color: rgb(66, 73, 80);
+  text-align: center;
 }
 
 .charming-capri__left{
@@ -237,7 +239,7 @@ header {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ),
-    url("/images/charming-left.jpg");
+    url("/images/charming-left.webp");
 }
 .charming-capri__right{
   background-image: linear-gradient(
@@ -245,7 +247,7 @@ header {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ),
-    url("/images/charming-right.jpg");
+    url("/images/charming-right.webp");
 }
 
 .more, 
@@ -343,35 +345,35 @@ div:has(.park-text) {
 }
 
 .rc1{
-    background-image: url('images/room-1.jpg');
+    background-image: url('images/room-1.webp');
     background-size: cover;
 }
 .rc2{
-    background-image: url('images/room-2.jpg');
+    background-image: url('images/room-2.webp');
     background-size: cover;
 }
 .rc3{
-    background-image: url('images/room-3.jpg');
+    background-image: url('images/room-3.webp');
     background-size: cover;
 }
 .rc4{
-    background-image: url('images/room-4.jpg');
+    background-image: url('images/room-4.webp');
     background-size: cover;
 }
 .rc5{
-    background-image: url('images/room-5.jpg');
+    background-image: url('images/room-5.webp');
     background-size: cover;
 }
 .rc6{
-    background-image: url('images/room-6.jpg');
+    background-image: url('images/room-6.webp');
     background-size: cover;
 }
 .rc7{
-    background-image: url('images/room-7.jpg');
+    background-image: url('images/room-7.webp');
     background-size: cover;
 }
 .rc8{
-    background-image: url('images/room-8.jpg');
+    background-image: url('images/room-8.webp');
     background-size: cover;
 }
 
@@ -394,7 +396,7 @@ div:has(.park-text) {
 
 .carousel-button span::selection{
     color: currentColor;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .carousel-button:hover{
@@ -474,14 +476,14 @@ div:has(.park-text) {
     to right,
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2)
-  ), url('images/journey-left.jpg');
+  ), url('images/journey-left.webp');
 }
 .journey__right{
   background-image:linear-gradient(
     to right,
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2)
-  ), url('images/journey-right.jpg');
+  ), url('images/journey-right.webp');
 }
 
 .more-grid{
@@ -570,14 +572,14 @@ div:has(.park-text) {
 
 
 .pi1{
-  background-image: url('/images/promo-1.jpg');
+  background-image: url('/images/promo-1.webp');
   background-size: cover;
   background-position: center;
 }
 
 .pi2{
   background-position: center;
-  background-image: url('/images/promo-2.jpg');
+  background-image: url('/images/promo-2.webp');
   background-size: cover;
 }
 
@@ -648,28 +650,28 @@ div:has(.park-text) {
       to right,
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
-    ), url('images/lux-1.jpg');
+    ), url('images/lux-1.webp');
 }
 .lc2{
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
-    ), url('images/lux-2.jpg');
+    ), url('images/lux-2.webp');
 }
 .lc3{
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
-    ), url('images/lux-3.jpg');
+    ), url('images/lux-3.webp');
 }
 .lc4{
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
-    ), url('images/lux-4.jpg');
+    ), url('images/lux-4.webp');
 }
 
 .lux-carousel{
@@ -822,4 +824,161 @@ div:has(.park-text) {
   text-align: center;
   line-height: 1.8;
   margin-bottom: 2rem;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 1280px){
+  .paradise .paradise__welcome-text {
+    width: 50%;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+  .section-subheading{
+    font-size: 3rem;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-weight: 200;
+  }
+  .paradise .paradise__text {
+    margin: 3rem auto;
+    width: 76vw;
+    column-count: 2;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    word-spacing: 3px;
+  }
+  .charming-capri__text{
+    width: 45%;
+    margin: 5rem 0;
+    margin-left: 10%;
+  }
+  .charming-capri__text p{
+    font-size: 1rem;
+    width: 100%;
+  }
+  .charming-heading{
+    width: max-content;
+  }
+  .bottom__text p{
+    width: 100%;
+    font-size: 1rem;
+  }
+  .more-grid{
+    transform: translateY(100%) !important;
+    left: 0;
+  }
+  .more{
+    height: 4rem;
+    width: 4rem;
+  }
+  .section-heading{
+    font-size: 6rem;
+    margin: 5rem 0;
+  }
+
+  .caprese-villa{
+    padding: 4rem 0;
+    padding-left: 10rem;
+  }
+
+  .rooms-text{
+    margin: 4rem 0;
+    padding: 0;
+    padding-right: 2rem;
+  }
+
+  .rooms__card{
+    min-width: 0;
+    min-width: 28vh;
+    height: 40vh;
+    filter: brightness(.5);
+    transition: all .2s;
+}
+
+.carousel__heading{
+    font-size: 1rem;
+}
+
+.carousel__para{
+    font-size: 1rem;
+}
+.image__text{
+  font-size: 4rem;
+}
+.relax-heading{
+  margin-top: 13rem;
+}
+.image-para__container{
+  position: relative;
+}
+
+.relax-text{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  font-size: 1rem;
+  width: 50%;
+}
+.relax-text__heading{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.relax-text__para{
+  font-size: 1rem;
+  width: 70%;
+  font-weight: 200;
+}
+.relax-more{
+  top: 150%;
+}
+.promo__text-bottom h3{
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+.promotions__content{
+  width: 90%;
+}
+.lux-heading{
+  text-align: left;
+}
+.lux-text{
+  padding-right: 5rem;
+  margin-left: 5rem;
+}
+.lux__card > div{
+  width: 70%;
+  top: 10%;
+  left: auto;
+  right: 5%;
+}
+.lux__card p{
+  font-size: 1rem;
+}
+.info{
+  width: 90%;
+  gap: 5%;
+}
+
+.info-left{
+  gap: 3%;
+}
+.info .logo{
+  width: 50%;
+  margin: 0 auto;
+}
+.info .link a{
+  font-size: 1rem;
+}
+.social{
+  justify-content: space-between;
+  max-width: 100%;
+  padding-left: 10%;
+}
 }
