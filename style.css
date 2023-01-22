@@ -131,7 +131,7 @@ header {
   align-items: center;
   bottom: 3rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
 }
 
 .hero__arrow {
