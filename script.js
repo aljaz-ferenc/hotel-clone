@@ -56,15 +56,6 @@ gsap.from('header a',{
     }
 })
 
-gsap.to('.nav li a:after',{
-    color: 'black',
-    scrollTrigger: {
-        trigger: '.paradise',
-        start: 'top 20%',
-        toggleActions: "restart none none reverse"
-    }
-})
-
 const changedEls = [...changeNavEls1, ...changeNavEls2]
 changedEls.forEach(el => {
     gsap.from(el,{
@@ -149,7 +140,7 @@ function appear(elements) {
 function appearOpacity(elements) {
     elements.forEach(element => {
         gsap.from(element, {
-            y: 300,
+            y: 50,
             opacity: 0,
             duration: 1,
             scrollTrigger: {
