@@ -31,7 +31,60 @@ const luxCarouselBtnLeft = document.querySelector('.lux-carousel-left')
 const luxImagesElement = document.querySelector('.lux-carousel-images')
 const luxImages = document.querySelectorAll('.lux__card')
 const footerLinks = document.querySelectorAll('.link')
+const main = document.querySelector('main')
+const header = document.querySelector('header')
+const changeNavEls1 = document.querySelectorAll('.nav__right li:not(:last-child)')
+const changeNavEls2 = document.querySelectorAll('.nav__left li:not(:first-child)')
 
+
+//header
+gsap.to(header,{
+    backgroundColor: '#fff',
+    scrollTrigger: {
+        trigger: '.paradise',
+        start: 'top 20%',
+        toggleActions: "restart none none reverse"
+    }
+})
+
+gsap.from('header a',{
+    color: 'white',
+    scrollTrigger: {
+        trigger: '.paradise',
+        start: 'top 20%',
+        toggleActions: "restart none none reverse"
+    }
+})
+
+gsap.to('.nav li a:after',{
+    color: 'black',
+    scrollTrigger: {
+        trigger: '.paradise',
+        start: 'top 20%',
+        toggleActions: "restart none none reverse"
+    }
+})
+
+const changedEls = [...changeNavEls1, ...changeNavEls2]
+changedEls.forEach(el => {
+    gsap.from(el,{
+        autoAlpha: '0',
+        scrollTrigger: {
+            trigger: '.paradise',
+            start: 'top 20%',
+            toggleActions: "restart none none reverse"
+        }
+    })
+})
+
+gsap.from('nav img',{
+    autoAlpha: '0',
+    scrollTrigger: {
+        trigger: '.paradise',
+        start: 'top 20%',
+        toggleActions: "restart none none reverse"
+    }
+})
 
 //hero down arrow animation
 window.addEventListener('scroll', () => {
@@ -124,6 +177,19 @@ appearImages.forEach((img, i) => {
         duration: 1.5,
         scrollTrigger: {
             trigger: img,
+            start: 'top 95%'
+        }
+    })
+})
+
+footerLinks.forEach((link, i) => {
+    gsap.from(link, {
+        y:20,
+        delay: i * 0.1,
+        opacity:0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: link,
             start: 'top 95%'
         }
     })
@@ -293,7 +359,6 @@ function calcTransformPromoDistance() {
 
 
 //carousel lux section
-
 let luxState = 1
 
 luxCarouselBtnRight.addEventListener('click', () => {
@@ -348,15 +413,3 @@ luxImages.forEach((img, i) => {
     })
 })
 
-footerLinks.forEach((link, i) => {
-    gsap.from(link, {
-        y:20,
-        delay: i * 0.1,
-        opacity:0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: link,
-            start: 'top 95%'
-        }
-    })
-})
